@@ -19,7 +19,7 @@ for lang_prefix , lang in _available_lang:
 
 trans = googletrans.Translator()
 
-def convertLang(
+def _convert(
     text:str,
 
     output_lang:str='en',
@@ -67,3 +67,20 @@ def convertLang(
     
     else:
         raise AutoDectectError(f'Unknown Auto-Dectect mode :{auto_dectect}')
+
+
+def convert(
+    text:str,
+
+    output_lang:str='en',
+
+    auto_dectect:bool=ON,
+
+    source:str=None,
+    ):
+
+
+    _raw_out = _convert(text , output_lang , auto_dectect , source)
+    return _raw_out
+
+print(convert('Bonjour'))
