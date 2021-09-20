@@ -1,0 +1,4 @@
+pip
+googletrans==4.0.0rc1
+discord
+discord.ext
