@@ -34,7 +34,5 @@ async def on_message(message):
 
             await message.channel.send(file=discord.File('./Nyan Cat.mp4'))
             await message.reply('Rainbow Kitty go brrrr!!!')
-        
-        
 # keep_alive()
 client.run(tok)
