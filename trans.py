@@ -1,5 +1,5 @@
 import googletrans
-
+import time
 _available_lang = googletrans.LANGUAGES.items()
 
 langs = dict()
@@ -77,10 +77,15 @@ def convert(
     auto_dectect:bool=ON,
 
     source:str=None,
+
+    name:str=''
+
     ):
 
-
+    t0 = time.time()
     _raw_out = _convert(text , output_lang , auto_dectect , source)
-    return _raw_out
-
-print(convert('Bonjour'))
+    t1 = time.time()
+    total_time = t1 - t0
+    said = _convert(f'said' , output_lang , auto_dectect , source)
+    out  = (f"{name} {said}:\n\n{_raw_out}\n\nTranslation completed in {str(total_time)[:6]} seconds :clock2: ")
+    return out

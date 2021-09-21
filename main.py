@@ -1,6 +1,5 @@
 import discord
-import discord.ext
-import os
+import trans
 from keep_alive import keep_alive
 from threading import Thread
 with open('.token' , 'r') as token:
@@ -34,5 +33,8 @@ async def on_message(message):
 
             await message.channel.send(file=discord.File('./Nyan Cat.mp4'))
             await message.reply('Rainbow Kitty go brrrr!!!')
+        if command.casefold() == ' trans' or command.casefold() == ' transl8' or command.casefold() == ' translate':
+            _code = message.content.split('```')
+            print(_code)
 # keep_alive()
 client.run(tok)
