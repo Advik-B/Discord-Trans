@@ -57,3 +57,10 @@ Advik#9471 : t! trans
 op
 
 ``` (bot-testing [884352177810853898])
+Advik#9471 : t! trans
+```
+Bonjour
+``` (bot-testing [884352177810853898])
+Advik#9471 : t! cat (bot-testing [884352177810853898])
+Translator#3037 :  (bot-testing [884352177810853898])
+Translator#3037 : Rainbow Kitty go brrrr!!! (bot-testing [884352177810853898])
